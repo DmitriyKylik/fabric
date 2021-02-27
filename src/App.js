@@ -3,11 +3,13 @@ import { fabric } from 'fabric';
 
 const App = () => {
   const canvasRef = useRef(null);
-  const [canvas, setCanvas] = useState('');
+  const [canvas, setCanvas] = useState(null);
   const [objectList, setObjectList] = useState([]);
   const [robotoText, setRobotoText] = useState('');
   const [sansText, setSansText] = useState('');
-
+  console.log(objectList);
+  // console.log(canvas?.getObjects());
+  // console.log(canvasRef.current);
   // TO DO Get updated canvas instance
   const initCanvas = () => (
     new fabric.Canvas('canvas', {
@@ -17,7 +19,7 @@ const App = () => {
     })
   );
 
-  const addRect = (canvInstance) => {
+  const addRect = (canvInstance, objectList) => {
     const rect = new fabric.Rect({
       height: 200,
       width: 200,
@@ -25,9 +27,10 @@ const App = () => {
     });
 
     canvas.add(rect);
-
+    // console.log(canvas?.getObjects());
+    // console.log(fabric);
     // canvas.renderAll();
-    setObjectList(canvas._objects);
+    setObjectList(objectList => [...objectList, rect]);
   };
 
   const addCircle = (canvInstance) => {
@@ -37,9 +40,9 @@ const App = () => {
     });
 
     canvas.add(circle);
-
+    setObjectList(objectList => [...objectList, circle]);
     // canvas.renderAll();
-    setObjectList(canvas._objects);
+    // setObjectList(canvas._objects);
   };
 
   const addImage = (fileObj) => {
@@ -53,9 +56,8 @@ const App = () => {
           top: 0,
         });
         canvas.add(image);
-        setObjectList(canvas._objects);
-        // canvas.renderAll();
         fileObj.value = '';
+        setObjectList(objectList => [...objectList, image]);
       };
     };
     reader.readAsDataURL(fileObj.files[0]);
@@ -68,7 +70,7 @@ const App = () => {
       fontSize: 24,
     });
     canvas.add(robotoTextInstance);
-    setObjectList(canvas._objects);
+    setObjectList(objectList => [...objectList, robotoTextInstance]);
   };
 
   const addSansText = () => {
@@ -76,7 +78,7 @@ const App = () => {
       fontFamily: 'Helvetica'
     });
     canvas.add(sansTextInstance);
-    setObjectList(...canvas._objects);
+    setObjectList(objectList => [...objectList, sansTextInstance]);
   };
 
   useEffect(() => {
@@ -102,8 +104,8 @@ const App = () => {
         </div>
         <div>
         {objectList.length > 0 ? (
-
             objectList.map((canvasItem, index) => {
+                console.log(canvasItem);
                 return (
                   <div key={`sdfsd${index}`}>{index + 1} Layer</div>
                 );
