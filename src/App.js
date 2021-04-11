@@ -1,19 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Canvas from './components/Canvas/Canvas';
-import { fabric } from 'fabric';
+import Text from './components/Text/Text';
+import {fabric} from 'fabric';
 // import FontImage from './assets/img/Font_Choose.jpg';
 // import Close from './assets/img/cancel.svg';
-import closeImg from './assets/img/cancel.svg';
-import { useFabric } from './hooks/useFabric';
+// import closeImg from './assets/img/cancel.svg';
+// import { useFabric } from './hooks/useFabric';
 // const deleteIcon = "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='595.275px' height='595.275px' viewBox='200 215 230 470' xml:space='preserve'%3E%3Ccircle style='fill:%23F44336;' cx='299.76' cy='439.067' r='218.516'/%3E%3Cg%3E%3Crect x='267.162' y='307.978' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -222.6202 340.6915)' style='fill:white;' width='65.545' height='262.18'/%3E%3Crect x='266.988' y='308.153' transform='matrix(0.7071 0.7071 -0.7071 0.7071 398.3889 -83.3116)' style='fill:white;' width='65.544' height='262.179'/%3E%3C/g%3E%3C/svg%3E";
 
 const App = () => {
-  // const canvasRef = useRef(null);
   const [canvas, setCanvas] = useState(null);
+  const [texts, setTexts] = useState({
+    '0': { text: 'A', left: 0 },
+    '1': { text: 'B', left: 30 },
+    '2': { text: 'C', left: 60 },
+  });
+  // console.log(texts);
+  const onTextChange = useCallback((id, options) => {
+    setTexts((texts) => ({ ...texts, [id]: options }));
+  }, []);
+
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     onTextChange('2', { text: 'Hello!', left: 60 });
+  //   }, 2000);
+  // }, []);
 
   return (
     <div className="App">
-      <Canvas setCanvas={setCanvas}/>
+      <button onClick={() => {
+        onTextChange('2', { text: 'Hello!', left: 100 });
+        // canvas.renderAll();
+        // setTexts((prevState) => ({...prevState, 3: { text: 'Hello!', left: 100 }}));
+        // canvas.add(() => new fabric.Textbox('Nigga', {text: 'Nigga', left: 150}))
+      } }>
+        OnTextChange
+      </button>
+      {Object.entries(texts).map(
+        ([key, options]) =>
+          canvas && <Text id={key} options={options} canvas={canvas} onChange={onTextChange} key={key} />,
+      )}
+      <Canvas setCanvas={setCanvas}>
+      </Canvas>
       {/* <header className="App-header">
         <h1>Fabric.js on React - fabric.Canvas('...')</h1>
         <input type="file" name="image" onChange={(event) => addImage(event.target)} />
