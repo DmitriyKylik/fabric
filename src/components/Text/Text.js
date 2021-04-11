@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { fabric } from 'fabric';
+import { textBoxFactory } from '../../factories/factories';
+import {useFabricObject} from '../../hooks/useFabricObject';
 
 const Text = ({ onChange, id, canvas, options }) => {
-  console.log(options.text ?? '', options);
-  const [textbox] = useState(() => new fabric.Textbox(options.text ?? '', options));
+  const factory = useCallback(() => textBoxFactory(options), []);
+  const textbox = useFabricObject(factory, canvas, id, options, onChange);
+
   // Adding textbox instance to canvas. Watching for canvas and textbox set instance changes.
-  useEffect(() => {
-    canvas.add(textbox);
-  }, [canvas, textbox]);
-
-  useEffect(() => {
-    textbox.setOptions(options);
-
-    canvas.renderAll();
-  }, [options, textbox]);
 
   useEffect(() => {
     const update = () => {
       onChange(id, textbox.toObject());
     };
 
-    textbox.on('moved', update);
-    textbox.on('scaled', update);
-    textbox.on('rotated', update);
     textbox.on('changed', update);
   }, [id, onChange, textbox]);
 
