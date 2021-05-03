@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useFabricObject = (objectFactory, canvas, id, options, onChange) => {
     const [element, setElement] = useState(null);
@@ -22,6 +22,9 @@ export const useFabricObject = (objectFactory, canvas, id, options, onChange) =>
         element?.on('moved', update);
         element?.on('scaled', update);
         element?.on('rotated', update);
+        element?.on('moveDown', update);
+        element?.on('moveUp', update);
+        element?.on('remove', update);
     }, [element, id, onChange]);
 
     useEffect(() => {

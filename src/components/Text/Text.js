@@ -1,26 +1,57 @@
 import React, { useEffect, useCallback } from 'react';
-import { fabric } from 'fabric';
 import { textBoxFactory } from '../../factories/factories';
 import {useFabricObject} from '../../hooks/useFabricObject';
+import {ReactComponent as ArrowUp} from '../../assets/img/arrow_up.svg';
+import {ReactComponent as ArrowDown} from '../../assets/img/arrow_down.svg';
 
-const Text = ({ onChange, id, canvas, options }) => {
+const Text = ({ onChange, onRemove, id, canvas, options, containerStyles, navButtonStyles, navButtonsWrapper }) => {
   const factory = useCallback(() => textBoxFactory(options), []);
   const textbox = useFabricObject(factory, canvas, id, options, onChange);
-
-  // Adding textbox instance to canvas. Watching for canvas and textbox set instance changes.
-
+  // console.log(canvas);
   useEffect(() => {
     const update = () => {
-      onChange(id, textbox.toObject());
+      onChange(id, textbox?.toObject());
     };
-
-    textbox.on('changed', update);
-  }, [id, onChange, textbox]);
-
+    textbox?.on('changed', update);
+  }, [textbox, id, onChange]);
 
   return (
-    <></>
+    <div className={containerStyles} style={{order: canvas?.getObjects()?.indexOf(textbox)}}>
+      {canvas?.getObjects()?.indexOf(textbox) + 1}) {textbox?.text}
+      <div className={navButtonsWrapper}>
+        <button
+          className={navButtonStyles}
+          onClick={() => {
+            textbox?.sendBackwards(false);
+            textbox.fire('moveDown');
+        }}>
+          <ArrowUp />
+        </button>
+        <button
+          className={navButtonStyles}
+          onClick={() => {
+            textbox?.bringForward(false);
+            textbox.fire('moveUp');
+        }}>
+          <ArrowDown />
+        </button>
+      </div>
+      <button
+        onClick={() => {
+          canvas.remove(textbox)
+          onRemove(id);
+        }}
+      >
+        remove
+      </button>
+    </div>
   );
+};
+
+Text.defautlProps = {
+  containerStyles: '',
+  navButtonStyles: '',
+  navButtonsWrapper: '',
 };
 
 export default Text;

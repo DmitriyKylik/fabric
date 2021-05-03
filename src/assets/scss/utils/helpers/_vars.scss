@@ -1,0 +1,122 @@
+// Font
+$mainFont: 'Open Sans',
+Helvetica,
+sans-serif;
+
+// Size
+$mainFontSize: 16px;
+$mainFontWeight: 400;
+$mainLineHeight: 1.5;
+
+//Font-colors
+$mainFontColor: #2b2b2b;
+$whiteFontColor: #fff;
+$whiteTransparent: rgba(255, 255, 255, 0.5);
+//$secondFontColor: #826459;
+$navLinksColor: rgba(43, 43, 43, 0.8);
+$navLinksColorLight: rgba(43, 43, 43, 0.6);
+$navLinksColorSuperLight: rgba(43, 43, 43, 0.4);
+$signNavColor: #2b2b2b;
+$darkGreyFontColor: #2b2b2b;
+$greyFontColor: rgba(43,43,43, 0.6);
+$lightGreyFontColor: rgba(43,43,43, 0.4);
+$primaryFontColor: #02AAFF;
+$pureBlue: #2684ff;
+$pureBlueTransp: #2684ff22;
+$pureBlueLight: rgba(38, 132, 255, 0.1);
+$dropDownColor: #2b2b2b;
+$placeholderColor: rgba(43,43,43, 0.4);
+$primaryLightFontColor: #00abff;
+$disabledInputColor: rgba(43,43,43, 0.2);
+
+//$mainFontColor: #505f79;
+//$whiteFontColor: #fff;
+//$whiteTransparent: rgba(255, 255, 255, 0.5);
+////$secondFontColor: #826459;
+//$navLinksColor: rgba(80, 95, 121, 0.8);
+//$navLinksColorLight: rgba(80, 95, 121, 0.7);
+//$navLinksColorSuperLight: rgba(80, 95, 121, 0.5);
+//$signNavColor: #505f79;
+//$darkGreyFontColor: #505f79;
+//$greyFontColor: #a2a6ae;
+//$lightGreyFontColor: #7c9cbf;
+//$primaryFontColor: #02AAFF;
+//$pureBlue: #2684ff;
+//$dropDownColor: #756F86;
+//$placeholderColor: #dbe2ea;
+//$primaryLightFontColor: #00abff;
+
+// BreakPoints
+$lgDesktopWidth: 1920px;
+$desktopWidth: 1440px;
+$smDesktopWidth: 980px;
+$tableWidth: 769px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+// Secondary breakpoints
+$seller-benefits-break: 1070px;
+$landing-break: 1026px;
+$break_lg1: 1685px;
+$break_lg2: 1445px;
+$break_dt1: 1280px;
+$break_dt2: 992px;
+$break_md1: 769px;
+$break_md2: 620px;
+$break_sm1: 480px;
+$break_sm2: 400px;
+$break_xs1: 380px;
+$break_xs2: 320px;
+$grid-breakpoints-xl: 1200px;
+$grid-breakpoints-lg: 1024px;
+$grid-breakpoints-md: 768px;
+
+//Gradients
+$blue-grad: linear-gradient(135.23deg, #02AAFF 0%, #2DB9FF 34.26%, #68CFFF 100%);
+
+// Colors
+//First Primary Color
+$primary-color-light: lighten(#02AAFF, 10%);
+$primary-color: #02AAFF;
+$primary-color-dark: darken(#02AAFF, 10%);
+//Second Primary Color
+$secPrimary-color-light: lighten(#019CEB, 20%);
+$secPrimary-color: #019CEB;
+$secPrimary-color-dark: darken(#019CEB, 10%);
+//Third Primary Color
+$thirdPrimary-color-light: lighten(#30b8fd, 10%);
+$thirdPrimary-color: #30b8fd;
+$thirdPrimary-color-dark: darken(#30b8fd, 10%);
+
+//Fourth Primary Color
+$fourthPrimary-color-light: lighten(#009df2, 10%);
+$fourthPrimary-color: #009df2;
+$fourthPrimary-color-dark: darken(#009df2, 10%);
+
+$footerbg: #f7faff;
+$grey-color-light: #f4f7fa;
+$grey-color: #E8E8E8;
+$grey-color-super: #f4f4f4;
+$light-color-super: #999;
+$light-color: #ddd;
+$dark-color: #111;
+$dark-light-color: #2b2c31;
+$border-color: #dbe2ea;
+$border-color-dark: #505f79;
+$border-color-light: rgba(80, 95, 121, 0.1);
+$white-color: #fff;
+$black-color: #000;
+$disabled-color: #c7c6c6;
+$disabled-btn-color: #d2f0ff;
+$light-blue-grey: #c1c7d0;
+$gold: #ffc400;
+$status-success: #36b37e;
+$status-blocked: #d32452;
+
+$success-color: #14a38b;
+$danger-color: #d32452;
+$danger-light-color: #fe0055;
+$danger-dark-color: #cb3f6e;
+$warning-color: #ffe07a;
+$scroll-bg-color: rgba(2, 170, 255, 0.1);
+$search-border: 1px solid #e9eff7
