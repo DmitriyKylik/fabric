@@ -28,9 +28,8 @@ const App = () => {
   // const [images, onImageChange] = useFabricData({
   //   '0': { left: 100, width: 50, height: 50, data: { src: base64svg } },
   // });
-
   const addRobotoText = () => {
-    onTextChange(uuidv4(), {text: robotoText, fill: '#'+(Math.random()*0xFFFFFF<<0).toString(16)});
+    onTextChange(uuidv4(), {text: robotoText, fill: '#'+(Math.random()*0xFFFFFF<<0).toString(16), isActive: false});
   };
 
   const addImage = (file) => {
@@ -49,10 +48,11 @@ const App = () => {
         <Canvas setCanvas={setCanvas}>
         </Canvas>
         <div className={`${styles.canvasObjectsList} flex flex-col`}>
-          {Object.entries(texts).map(
-            ([key, options], index) => (
+          {Object.entries(texts).map(([key, options], index) => {
+            return (
               canvas &&
               <Text
+                activeStyles={styles.active}
                 containerStyles={styles.canvasObjectsListItem}
                 navButtonStyles={styles.navButtons}
                 navButtonsWrapper={styles.navButtonsWrapper}
@@ -61,10 +61,10 @@ const App = () => {
                 canvas={canvas}
                 onRemove={onObjectRemove}
                 onChange={onTextChange}
-                key={`zdfd${index}`}
+                key={key}
               />
-            )
-          )}
+            );
+          })}
         </div>
 
         {/*{Object.entries(images).map(*/}

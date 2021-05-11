@@ -20,21 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df683b20-e8b7-4b0c-9701-3844203aa9ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_utils.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/utils/_libs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/utils/helpers/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/utils/helpers/_vars.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useFabricData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/cancel.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/cancel.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Canvas/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas/Canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Image/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/factories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/factories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useFabricObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFabricObject.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +81,11 @@
       <workItem from="1618670253892" duration="3687000" />
       <workItem from="1618936313325" duration="4224000" />
       <workItem from="1620038405420" duration="15000" />
-      <workItem from="1620039407458" duration="18142000" />
+      <workItem from="1620039407458" duration="18463000" />
+      <workItem from="1620567804672" duration="12856000" />
+      <workItem from="1620640588910" duration="9691000" />
+      <workItem from="1620670205415" duration="326000" />
+      <workItem from="1620756323908" duration="4172000" />
     </task>
     <servers />
   </component>
@@ -115,14 +109,18 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="703" y="288" key="#JavaScript/0.0.1920.1160/1920.0.1280.994@0.0.1920.1160" timestamp="1618681453979" />
+    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620764300322">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160/1920.0.1280.994@0.0.1920.1160" timestamp="1620764300322" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1618068487013">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1160/1920.0.1280.994@0.0.1920.1160" timestamp="1618068487013" />
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620058823738">
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620574410374">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1280.994@0.0.1920.1160" timestamp="1620058823738" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1280.994@0.0.1920.1160" timestamp="1620574410374" />
     <state x="670" y="320" width="579" height="520" key="find.popup" timestamp="1620044809557">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
