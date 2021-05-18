@@ -1,0 +1,73 @@
+@import "../../assets/scss/utils";
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid $border-color;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  @include transitionAll;
+  //&:hover {
+  //  box-shadow: 0 0 8px 3px $border-color;
+  //}
+  &.active {
+    box-shadow: 0 0 8px 3px $border-color;
+  }
+}
+
+.navButtonsWrapper {
+  margin-left: auto;
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid $border-color;
+  @include button();
+  &:hover {
+    & svg {
+      fill: $primary-color;
+    }
+  }
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+  & svg {
+    width: 15px;
+    height: auto;
+    fill: $border-color;
+    @include transitionAll;
+  }
+}
+
+.displayToggleBtn {
+  padding: 10px;
+  margin-left: auto;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  @include transitionAll;
+  &:hover {
+    background: $border-color;
+    color: $whiteFontColor;
+  }
+}
+
+.removeBtn {
+  & .icon {
+    width: 24px;
+    height: auto;
+    fill: $danger-color;
+    @include transitionAll;
+  }
+  &:hover {
+    & .icon {
+      transform: scale(1.2)
+    }
+  }
+}

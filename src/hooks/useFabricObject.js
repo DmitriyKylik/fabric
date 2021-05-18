@@ -14,18 +14,17 @@ export const useFabricObject = (objectFactory, canvas, id, options, onChange, on
             setElement(awaitedElement);
         };
         setupObject();
-    }, [canvas, element, objectFactory, options]);
+    }, [canvas, element, objectFactory]);
 
     useEffect(() => {
         const update = (objectData) => {
             onChange(id, objectData);
-            canvas.requestRenderAll();
+            canvas.renderAll();
         };
 
         const remove = () => {
             onRemove(id);
         };
-
 
         // element?.on('moved', () => update(element?.toObject()));
         // element?.on('scaled', () => update(element?.toObject()));
@@ -41,7 +40,9 @@ export const useFabricObject = (objectFactory, canvas, id, options, onChange, on
         element?.on('moveDown', () => update(element?.toObject()));
         element?.on('moveUp', () => update(element?.toObject()));
         element?.on('removed', remove);
-    }, [element, id, onChange, onRemove, canvas]);
+        element?.on('toggleVisible', () => update(element?.toObject()));
+
+    }, [element, id, onChange, onRemove]);
 
     useEffect(() => {
         element?.setOptions(options);

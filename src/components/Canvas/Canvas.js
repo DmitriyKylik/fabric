@@ -7,6 +7,7 @@ const Canvas = ({ setCanvas, children }) => {
   useEffect(() => {
     setCanvas(new fabric.Canvas(canvasRef.current, {
       renderOnAddRemove: true,
+      stateful: true,
       height: 400,
       width: 400,
       backgroundColor: 'pink',
