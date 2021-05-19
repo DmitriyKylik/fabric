@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df683b20-e8b7-4b0c-9701-3844203aa9ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ListItem/ListItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ListItem/ListItem.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Canvas/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas/Canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListItem/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListItem/ListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListItem/ListItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListItem/ListItem.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useFabricObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFabricObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +59,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.css" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -102,7 +96,8 @@
       <workItem from="1620640588910" duration="9691000" />
       <workItem from="1620670205415" duration="326000" />
       <workItem from="1620756323908" duration="4172000" />
-      <workItem from="1621330170875" duration="20149000" />
+      <workItem from="1621330170875" duration="20465000" />
+      <workItem from="1621412113138" duration="4894000" />
     </task>
     <servers />
   </component>

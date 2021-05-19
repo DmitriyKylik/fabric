@@ -37,10 +37,11 @@ export const useFabricObject = (objectFactory, canvas, id, options, onChange, on
             ...element?.toObject(),
             isActive: false,
         })));
-        element?.on('moveDown', () => update(element?.toObject()));
-        element?.on('moveUp', () => update(element?.toObject()));
+        // element?.on('moveDown', () => update(element?.toObject()));
+        // element?.on('moveUp', () => update(element?.toObject()));
         element?.on('removed', remove);
-        element?.on('toggleVisible', () => update(element?.toObject()));
+        // element?.on('toggleVisible', () => update(element?.toObject()));
+        element?.on('update', () => update(element?.toObject()));
 
     }, [element, id, onChange, onRemove]);
 
