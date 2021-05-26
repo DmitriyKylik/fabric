@@ -8,40 +8,48 @@ import {ReactComponent as SaveIcon} from "../../assets/img/save.svg";
 import styles from './ListItem.module.scss';
 
 const ListItem = ({canvasObject, canvas, options}) => {
-  const [objectName, setObjectName] = useState(canvasObject.name);
-  const [inputFocused, setInputFocused] = useState('');
+  const [inputValue, setInputValue] = useState(canvasObject.name);
+  const [inputFocused, setInputFocused] = useState(false);
   const index = canvas?.getObjects()?.indexOf(canvasObject);
 
-  // const saveObjectNameHandler = () => {
-  //   canvasObject.name = objectName;
-  //   canvas.renderAll();
-  //   canvasObject.fire('update');
-  // };
+  const saveObjectNameHandler = () => {
+    canvasObject.name = inputValue;
+    canvasObject.fire('update');
+    toggleNameInput();
+  };
+
+  const toggleNameInput = () => setInputFocused(!inputFocused);
 
     return (
         <div
-            // onClick={() => {
-            //     canvas.setActiveObject(canvasObject);
-            // }}
             className={`${styles.listItem} ${options?.isActive ? styles.active : ''}`}
             style={{order: index}}
         >
-          {/*{canvasObject?.name && canvasObject.name}*/}
           <span>
             {index + 1})
           </span>
-          <div className={`${styles.inputWrapper} ${!inputFocused ? styles.readOnly : ''}`}>
-            <input
-              value={objectName}
-              onFocus={() => setInputFocused(!inputFocused)}
-              onBlur={() => setInputFocused(!inputFocused)}
-              onChange={(event) => setObjectName(event.target.value || '...')}
-            />
-            <SaveIcon
-              className={styles.icon}
-            />
+          <div className={styles.inputWrapper}>
+            {inputFocused ? (
+              <div className={`${styles.inputContainer} ${inputFocused ? styles.active : ''}`}>
+                <input
+                  value={inputValue}
+                  onChange={(event) => setInputValue(event.target.value)}
+                />
+                <SaveIcon
+                  onClick={saveObjectNameHandler}
+                  className={styles.icon}
+                />
+
+              </div>
+            ) : (
+              <div
+                className={styles.objectName}
+                onClick={toggleNameInput}
+              >
+              {canvasObject.name ? canvasObject.name : '...'}
+            </div>
+            )}
           </div>
-          {/*{canvasObject?.text}*/}
           <div className={styles.navButtonsWrapper}>
             <button
               className={styles.visibilityBtn}
@@ -49,7 +57,6 @@ const ListItem = ({canvasObject, canvas, options}) => {
                 canvasObject.visible = !canvasObject.visible;
                 canvasObject.isActive = !canvasObject.isActive;
                 canvas.discardActiveObject();
-                canvas.renderAll();
                 canvasObject.fire('update');
               }}
             >

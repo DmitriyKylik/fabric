@@ -8,9 +8,9 @@ const Canvas = ({ setCanvas, children }) => {
     setCanvas(new fabric.Canvas(canvasRef.current, {
       renderOnAddRemove: true,
       stateful: true,
-      height: 400,
-      width: 400,
-      backgroundColor: 'pink',
+      height: 600,
+      width: 800,
+      backgroundColor: '#f4f7fa',
     }));
   }, [setCanvas]);
 

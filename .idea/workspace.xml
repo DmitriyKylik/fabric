@@ -20,11 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df683b20-e8b7-4b0c-9701-3844203aa9ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Figure/Figure.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App_default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/Font_Choose.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Canvas/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Canvas/Canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ListItem/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListItem/ListItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ListItem/ListItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListItem/ListItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factories/factories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/factories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useFabricData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFabricData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useFabricObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFabricObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +107,7 @@
       <workItem from="1620756323908" duration="4172000" />
       <workItem from="1621330170875" duration="20465000" />
       <workItem from="1621412113138" duration="4894000" />
+      <workItem from="1622052160593" duration="8920000" />
     </task>
     <servers />
   </component>
@@ -115,6 +125,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1622063018158">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1160/1920.0.1280.994@0.0.1920.1160" timestamp="1622063018158" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622060207759">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1280.994@0.0.1920.1160" timestamp="1622060207759" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

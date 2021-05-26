@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { textBoxFactory } from '../../factories/factories';
 import {useFabricObject} from '../../hooks/useFabricObject';
 import ListItem from "../ListItem/ListItem";
@@ -21,12 +21,6 @@ const Text = ({ onChange, onRemove, id, canvas, options }) => {
         options={options}
       />
   );
-};
-
-Text.defautlProps = {
-  containerStyles: '',
-  navButtonStyles: '',
-  navButtonsWrapper: '',
 };
 
 export default Text;

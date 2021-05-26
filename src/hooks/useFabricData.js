@@ -7,9 +7,9 @@ export const useFabricData = (initial) => {
         setObjects((objects) => ({ ...objects, [id]: options }));
     }, []);
 
-    const onObjectAdd = useCallback((id, options) => {
-        setObjects((objects) => ({ ...objects, [id]: options }));
-    }, []);
+    // const onObjectAdd = useCallback((id, options) => {
+    //     setObjects((objects) => ({ ...objects, [id]: options }));
+    // }, []);
 
     const onObjectRemove = useCallback((id) => {
         setObjects((objects) => {

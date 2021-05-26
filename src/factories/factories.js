@@ -4,14 +4,28 @@ export const textBoxFactory = async (options) => {
  return new fabric.Textbox(options.text ?? '', options)
 };
 
-export const imageFactory = (imageObject, options) => (
-    new Promise((resolve, reject) => {
-        console.log(        new fabric.Image(imageObject
-          ? resolve(URL.createObjectURL(imageObject))
-          : reject(URL.createObjectURL(imageObject)), options));
-        new fabric.Image(imageObject
-            ? resolve(URL.createObjectURL(imageObject))
-            : reject(URL.createObjectURL(imageObject)), options);
-    })
+export const figureFactory = async (options) => {
+  return new fabric.Rect(options)
+};
+
+export const imageFactory = ({imageObject, ...options}) => (
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = (event) => {
+      const imgObj = new Image();
+      imgObj.src = event.target.result;
+      imgObj.onload = () => {
+
+        const image = new fabric.Image(imgObj);
+        image.set(options);
+
+        resolve(image);
+        reject(image);
+      }
+    };
+    reader.readAsDataURL(imageObject);
+  })
 );
+
 

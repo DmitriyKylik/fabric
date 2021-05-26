@@ -29,6 +29,9 @@ export const useFabricObject = (objectFactory, canvas, id, options, onChange, on
         // element?.on('moved', () => update(element?.toObject()));
         // element?.on('scaled', () => update(element?.toObject()));
         // element?.on('rotated', () => update(element?.toObject()));
+        // element?.on('toggleVisible', () => update(element?.toObject()));
+        // element?.on('moveDown', () => update(element?.toObject()));
+        // element?.on('moveUp', () => update(element?.toObject()));
         element?.on('selected', () => update({
          ...element?.toObject(),
          isActive: true,
@@ -37,11 +40,11 @@ export const useFabricObject = (objectFactory, canvas, id, options, onChange, on
             ...element?.toObject(),
             isActive: false,
         })));
-        // element?.on('moveDown', () => update(element?.toObject()));
-        // element?.on('moveUp', () => update(element?.toObject()));
         element?.on('removed', remove);
-        // element?.on('toggleVisible', () => update(element?.toObject()));
-        element?.on('update', () => update(element?.toObject()));
+        element?.on('update', (payload = {}) => update({
+            ...element?.toObject(),
+            ...payload
+        }));
 
     }, [element, id, onChange, onRemove]);
 

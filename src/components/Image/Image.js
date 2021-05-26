@@ -1,12 +1,20 @@
 import React, { useCallback } from 'react';
 import { useFabricObject } from '../../hooks/useFabricObject';
 import { imageFactory } from '../../factories/factories';
+import ListItem from "../ListItem/ListItem";
 
-export const Image = (props) => {
-    const factory = useCallback(() => imageFactory(props.options), []);
-    useFabricObject(factory, props.canvas, props.id, props.options, props.onChange);
+export const Image = ({ onChange, onRemove, id, canvas, options }) => {
+    const factory = useCallback(() => imageFactory(options), []);
+  debugger;
+    const image = useFabricObject(factory, canvas, id, options, onChange, onRemove);
 
-    return <></>;
+    return image && (
+      <ListItem
+        canvas={canvas}
+        canvasObject={image}
+        options={options}
+      />
+    );
 };
 
 export default Image;
