@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/fabric-react/static/css/main.8d1eed83.chunk.css",
+    "main.js": "/fabric-react/static/js/main.c6bf7aeb.chunk.js",
+    "main.js.map": "/fabric-react/static/js/main.c6bf7aeb.chunk.js.map",
+    "runtime-main.js": "/fabric-react/static/js/runtime-main.84301ce2.js",
+    "runtime-main.js.map": "/fabric-react/static/js/runtime-main.84301ce2.js.map",
+    "static/js/2.51f76c2b.chunk.js": "/fabric-react/static/js/2.51f76c2b.chunk.js",
+    "static/js/2.51f76c2b.chunk.js.map": "/fabric-react/static/js/2.51f76c2b.chunk.js.map",
+    "static/js/3.99f8015f.chunk.js": "/fabric-react/static/js/3.99f8015f.chunk.js",
+    "static/js/3.99f8015f.chunk.js.map": "/fabric-react/static/js/3.99f8015f.chunk.js.map",
+    "index.html": "/fabric-react/index.html",
+    "static/css/main.8d1eed83.chunk.css.map": "/fabric-react/static/css/main.8d1eed83.chunk.css.map",
+    "static/js/2.51f76c2b.chunk.js.LICENSE.txt": "/fabric-react/static/js/2.51f76c2b.chunk.js.LICENSE.txt",
+    "static/media/arrow_down.66247d5c.svg": "/fabric-react/static/media/arrow_down.66247d5c.svg",
+    "static/media/arrow_up.ed145ac7.svg": "/fabric-react/static/media/arrow_up.ed145ac7.svg",
+    "static/media/cancel.8a9d060e.svg": "/fabric-react/static/media/cancel.8a9d060e.svg",
+    "static/media/save.53273fd2.svg": "/fabric-react/static/media/save.53273fd2.svg",
+    "static/media/visibility.47ca7047.svg": "/fabric-react/static/media/visibility.47ca7047.svg",
+    "static/media/visibility_hide.0fcdb39a.svg": "/fabric-react/static/media/visibility_hide.0fcdb39a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.84301ce2.js",
+    "static/js/2.51f76c2b.chunk.js",
+    "static/css/main.8d1eed83.chunk.css",
+    "static/js/main.c6bf7aeb.chunk.js"
+  ]
+}
