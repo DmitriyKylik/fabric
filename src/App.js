@@ -11,6 +11,9 @@ const App = () => {
   // console.log(canvas?.getObjects());
   // console.log(canvasRef.current);
   // TO DO Get updated canvas instance
+
+
+  // constant canvas properties
   const initCanvas = () => (
     new fabric.Canvas('canvas', {
       height: 800,
@@ -39,6 +42,8 @@ const App = () => {
       fill: 'green',
     });
 
+    // Reuse next two lines
+    // move to the function addElement(circle)
     canvas.add(circle);
     setObjectList(objectList => [...objectList, circle]);
     // canvas.renderAll();
@@ -47,9 +52,12 @@ const App = () => {
 
   const addImage = (fileObj) => {
     const reader = new FileReader();
+
+    // Better wrap in the promise
     reader.onload = (event) => {
       const imgObj = new Image();
       imgObj.src = event.target.result;
+      // imgObj.onerror = need same action
       imgObj.onload = () => {
         const image = new fabric.Image(imgObj, {
           left: 0,
@@ -60,6 +68,7 @@ const App = () => {
         setObjectList(objectList => [...objectList, image]);
       };
     };
+    // reader.onerror = need same action
     reader.readAsDataURL(fileObj.files[0]);
   };
 
@@ -90,27 +99,30 @@ const App = () => {
       <header className="App-header">
         <h1>Fabric.js on React - fabric.Canvas('...')</h1>
         <input type="file" name="image" onChange={(event) => addImage(event.target)} />
+{/* Create base component button */}
         <button onClick={addRect}>Rectangle</button>
         <button onClick={addCircle}>Circle</button>
+{/* Create component - <AddTextButton/> */}
         <div>
           <div>Roboto text</div>
+         {/* Write pipeFunction -  <input type="text" onChange={pipeEventValue(setRobotoText)} />*/}
           <input type="text" onChange={(event) => setRobotoText(event.target.value)} />
           <button onClick={addRobotoText}>Add roboto text</button>
         </div>
+{/* Reuse  <AddTextButton/> */}
         <div>
           <div>Sans text</div>
           <input type="text" onChange={(event) => setSansText(event.target.value)} />
           <button onClick={addSansText}>Add sans text</button>
         </div>
         <div>
-        {objectList.length > 0 ? (
+        {
             objectList.map((canvasItem, index) => {
-                console.log(canvasItem);
                 return (
                   <div key={`sdfsd${index}`}>{index + 1} Layer</div>
                 );
             })
-        ) : null}
+        )}
         </div>
         <canvas ref={canvasRef} id="canvas" />
       </header>
